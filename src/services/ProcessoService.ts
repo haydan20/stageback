@@ -3,6 +3,7 @@ import { IProcess } from '../interfaces/ProcessInterface';
 import { updateAreaProcess } from './AreaService';
 
 export const createProcess = async (data: Partial<IProcess>, areaId : String): Promise<any> => {
+    debugger
     delete data._id;
     const process = new Process(data);
     const saveProcess : IProcess = await process.save();
