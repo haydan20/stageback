@@ -32,7 +32,6 @@ export const deleteArea = async (req: Request, res: Response) => {
     area ? res.status(204).end() : res.status(404).json({ message: 'Area não encontrada' });
 };
 export const getAreaInfo = async (req: Request, res: Response) => { 
-    debugger
     const areas = await ConsultaOraculo(req.body.objAreas[0].processes,req.body.question);
     res.status(200).json(areas);
 };

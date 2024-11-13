@@ -6,5 +6,6 @@ export interface IProcess extends Document {
     tools: string;
     responsible: string;
     documentation: string;
+    description:string;
     isSystemic: boolean;
 }

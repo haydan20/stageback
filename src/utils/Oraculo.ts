@@ -7,7 +7,6 @@ const OPENAI_API_KEY = OPENAIKEY;
 async function ConsultaOraculo(jsonData: Record<string, unknown>, question: string): Promise<string> {
   try {
 
-debugger
       const content = `Informações: ${JSON.stringify(jsonData)}\nPergunta: ${question}`;
       const data = {
           model: "gpt-4o-mini",

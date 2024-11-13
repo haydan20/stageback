@@ -2,7 +2,6 @@ import { Request, Response } from 'express';
 import * as processoService from '../services/ProcessoService';
 
 export const createProcess = async (req: Request, res: Response) => {
-    debugger
     const area = await processoService.createProcess(req.body.processT,req.body.areaId);
     res.status(201).json(area);
 };
